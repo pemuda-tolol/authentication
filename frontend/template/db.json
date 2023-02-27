@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Bunaya",
+      "password": "1"
+    },
+    {
+      "name": "Palmer Casey",
+      "username": "fufizitoqy",
+      "email": "pinonixobu@mailinator.com",
+      "gander": "",
+      "password": "1",
+      "gender": "female",
+      "id": 2
+    },
+    {
+      "name": "Lysandra Heath",
+      "username": "letelis",
+      "email": "tukexylij@mailinator.com",
+      "gender": "female",
+      "password": "1",
+      "id": 3
+    },
+    {
+      "username": "bunaya",
+      "password": "1",
+      "id": 4
+    },
+    {
+      "name": "Nicholas Macdonald",
+      "username": "godog",
+      "email": "fiso@mailinator.com",
+      "gender": "female",
+      "password": "1",
+      "id": 5
+    },
+    {
+      "username": "fufizitoqy",
+      "password": "1",
+      "id": 6
+    }
+  ]
+}
