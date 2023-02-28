@@ -1,4 +1,4 @@
-from config import app,db,jsonify,HTTPStatus
+from configur import app,db,jsonify,HTTPStatus
 
 @app.route("/list/user")
 def listUser():

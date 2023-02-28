@@ -1,14 +1,13 @@
 from configur import app,db,jsonify,HTTPStatus
 
-@app.route("/delete/user/<id>",methods=['DELETE'])
-def deleteUser(id):
+@app.route("/delete/book/author/<id>",methods=['DELETE'])
+def deleteBookAuthor(id):
     try:
-        selectById = (f"select id_user,role from tbl_user where id_user = {id}")
+        selectById = (f"select id_book_author from tbl_book_author where id_book_author = {id}")
         dictData={}
         for i in db.execute(selectById):
             dictData = {
-                "id": i[0],
-                "role": i[1]
+                "id_book_author": i[0]
             } 
         if not dictData:
             response = {
@@ -16,8 +15,8 @@ def deleteUser(id):
                 "message": "Data Not Found"
             }
             return jsonify(response), HTTPStatus.BAD_REQUEST
-        elif dictData['role'] == 'user' :
-            deleteById = (f"delete from tbl_user where id_user = {id}")
+        elif dictData:
+            deleteById = (f"delete from tbl_book_author where id_book_author = {id}")
             db.execute(deleteById) 
             response = {
                 "data": "Success",

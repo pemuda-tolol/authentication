@@ -1,4 +1,4 @@
-from config import app,email_regex,request,jsonify,HTTPStatus,db
+from configur import app,email_regex,request,jsonify,HTTPStatus,db
 
 @app.route('/create/book/author', methods=['POST'])
 def createBookAuthor():

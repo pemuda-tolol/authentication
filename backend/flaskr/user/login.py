@@ -1,4 +1,4 @@
-from config import app,request,hashlib,db,create_access_token,jsonify,HTTPStatus,os
+from configur import app,request,hashlib,db,create_access_token,jsonify,HTTPStatus,os
 
 @app.route("/auth/login/user", methods = ['POST'])
 def loginUser():

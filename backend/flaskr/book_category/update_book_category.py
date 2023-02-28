@@ -1,4 +1,4 @@
-from config import app,db,jsonify,HTTPStatus,request
+from configur import app,db,jsonify,HTTPStatus,request
 
 @app.route("/update/book/category/<id>")
 def listUpdateBookCategory(id):

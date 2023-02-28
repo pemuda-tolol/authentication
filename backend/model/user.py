@@ -1,6 +1,4 @@
-from pony.orm import Required,PrimaryKey,Set,Optional
-from datetime import date
-from .base import db
+from .base import db,Required,PrimaryKey,Set,date
 
 class User(db.Entity):
     _table_ = "tbl_user"

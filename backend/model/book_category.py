@@ -1,5 +1,4 @@
-from pony.orm import Required,PrimaryKey,Set
-from .base import db
+from .base import db,Required,PrimaryKey,Set
 
 class BookCategory(db.Entity):
     _table_ = "tbl_book_category"

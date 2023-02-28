@@ -1,5 +1,4 @@
-from pony.orm import Required,PrimaryKey,Set,Optional
-from .base import db
+from .base import db,Required,PrimaryKey,Set,Optional
 from .borrowed_book import BorrowedBook
 from .book import Book
 

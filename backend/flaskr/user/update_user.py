@@ -1,4 +1,4 @@
-from config import app,db,jsonify,HTTPStatus,request,hashlib,os
+from configur import app,db,jsonify,HTTPStatus,request,hashlib,os
 
 @app.route("/update/user/<id>")
 def listUpdateUser(id):

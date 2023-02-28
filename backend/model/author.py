@@ -1,5 +1,4 @@
-from pony.orm import Required,PrimaryKey,Set,Optional
-from .base import db
+from .base import db,PrimaryKey,Required,Optional,Set
 
 class BookAuthor(db.Entity):
     _table_ = "tbl_book_author"

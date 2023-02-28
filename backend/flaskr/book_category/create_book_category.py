@@ -1,5 +1,5 @@
 
-from config import app,request,jsonify,HTTPStatus,db
+from configur import app,request,jsonify,HTTPStatus,db
 
 @app.route('/create/book/category', methods=['POST'])
 def createBookCategory():

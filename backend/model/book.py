@@ -1,5 +1,4 @@
-from pony.orm import Required,PrimaryKey,Set
-from .base import db
+from .base import db,Required,PrimaryKey,Set
 from .book_category import BookCategory
 from .author import BookAuthor
 from .publisher import Publisher

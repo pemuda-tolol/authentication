@@ -1,4 +1,4 @@
-from config import app,request,jsonify,HTTPStatus,email_regex,hashlib,db,os
+from configur import app,request,jsonify,HTTPStatus,email_regex,hashlib,db,os
 
 
 @app.route("/auth/register/user", methods = ['POST'])

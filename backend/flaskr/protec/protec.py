@@ -1,4 +1,4 @@
-from config import app,jwt_required,get_jwt_identity,jsonify,HTTPStatus,db
+from configur import app,jwt_required,get_jwt_identity,jsonify,HTTPStatus,db
 
 # USER ACCESS BOOK
 @app.route("/list/book")

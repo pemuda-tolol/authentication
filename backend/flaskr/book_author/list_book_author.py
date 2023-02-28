@@ -1,4 +1,4 @@
-from config import app,jsonify,HTTPStatus,db
+from configur import app,jsonify,HTTPStatus,db
 
 @app.route('/list/book/author')
 def listBookAuthor(): 
