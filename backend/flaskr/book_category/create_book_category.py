@@ -1,8 +1,5 @@
-from main import app,email_regex
-from flask import request,jsonify
-from http import HTTPStatus
-import os,hashlib
-from model import db
+
+from config import app,request,jsonify,HTTPStatus,db
 
 @app.route('/create/book/category', methods=['POST'])
 def createBookCategory():

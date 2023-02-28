@@ -1,14 +1,10 @@
-from main import app,email_regex
-from flask import request,jsonify
-from http import HTTPStatus
-import os,hashlib
-from model import db
+from config import app,jsonify,db,HTTPStatus
 
 
 @app.route('/list/book/publisher')
 def listBookPublisher(): 
     try:
-        listBookPublisher = db.select(f"select *from tbl_book_author")
+        listBookPublisher = db.select(f"select *from tbl_book_publisher")
         listSelectBookPublisher = []
         for i in listBookPublisher:
             dictBookPublisher ={

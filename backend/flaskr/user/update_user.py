@@ -1,8 +1,4 @@
-from main import app,email_regex
-from flask import request,jsonify
-from http import HTTPStatus
-import os,hashlib
-from model import db
+from config import app,db,jsonify,HTTPStatus,request,hashlib,os
 
 @app.route("/update/user/<id>")
 def listUpdateUser(id):

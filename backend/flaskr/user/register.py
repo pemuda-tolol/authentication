@@ -1,8 +1,5 @@
-from main import app,email_regex
-from flask import request,jsonify
-from http import HTTPStatus
-import os,hashlib
-from model import db
+from config import app,request,jsonify,HTTPStatus,email_regex,hashlib,db,os
+
 
 @app.route("/auth/register/user", methods = ['POST'])
 def registerUser():

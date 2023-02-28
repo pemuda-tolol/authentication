@@ -1,9 +1,4 @@
-from main import app,email_regex
-from flask import request,jsonify
-from http import HTTPStatus
-import os,hashlib
-from model import db
-from flask_jwt_extended import create_access_token
+from config import app,request,hashlib,db,create_access_token,jsonify,HTTPStatus,os
 
 @app.route("/auth/login/user", methods = ['POST'])
 def loginUser():
