@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Bunaya",
+      "password": "123456"
+    },
+    {
+      "name": "Palmer Casey",
+      "username": "fufizitoqy",
+      "email": "pinonixobu@mailinator.com",
+      "gander": "",
+      "password": "1",
+      "gender": "female",
+      "id": 2
+    },
+    {
+      "name": "Lysandra Heath",
+      "username": "letelis",
+      "email": "tukexylij@mailinator.com",
+      "gender": "female",
+      "password": "1",
+      "id": 3
+    }
+  ]
+}

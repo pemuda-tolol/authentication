@@ -1,0 +1,78 @@
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    
+  } 
+
+  /* .gede {
+    i
+  } */
+  
+  .tytyd {
+    flex-basis: 60%;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .tytyd img {
+    margin: 150px 0 0 140px;
+    width: 70%;
+    height: 60%;
+   
+  }
+  
+  
+  .tyts {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+  }
+   
+  .tyts h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .tyts p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 0px;
+    
+  }
+  
+  .butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #00bfa6;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 100px;
+    margin-left: 30px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #008d72;
+    cursor: pointer;
+  }
+   
