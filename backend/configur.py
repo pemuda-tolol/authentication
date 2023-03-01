@@ -1,9 +1,11 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,url_for
 import os,re,hashlib
 from pony.flask import Pony
 from flask_jwt_extended import jwt_manager,JWTManager,create_access_token,jwt_required,get_jwt_identity
 from http import HTTPStatus
 from model import db
+from werkzeug.utils import secure_filename
+
  
 
 app = Flask(__name__)
@@ -15,6 +17,9 @@ email_regex = re.compile(r"[^@]+@[^@]+\.[^@]")
 app.config['UPLOAD_FOLDER'] = os.getenv("UPLOAD_FOLDER")
 app.config['MAX_CONTENT_LENGHT'] = os.getenv("MAX_CONTENT_LENGHT")
 app.config['ALLOWED_EXTENSIONS'] = os.getenv("ALLOWED_EXTENSION")
+uploadfolder = app.config['UPLOAD_FOLDER']
+allowedextensions = app.config['ALLOWED_EXTENSIONS']
+maxcontent = app.config['MAX_CONTENT_LENGHT']
  
 jwt = JWTManager(app)
 ponyapp = Pony(app)

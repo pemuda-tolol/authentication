@@ -1,6 +1,5 @@
 from configur import app,request,jsonify,HTTPStatus,email_regex,hashlib,db,os
 
-
 @app.route("/auth/register/user", methods = ['POST'])
 def registerUser():
     try:
@@ -20,7 +19,7 @@ def registerUser():
             return jsonify(response),HTTPStatus.BAD_REQUEST
         elif email_regex.match(jsonBody['email']):
             hashpassword = hashlib.md5((jsonBody['password']+ os.getenv("SALT_PASSWORD")).encode())
-            createUser = (f"insert into tbl_user(username,email,password,name,gender,address,city,phone_number,date_register,role) values('{jsonBody['username']}','{jsonBody['email']}','{hashpassword.hexdigest()}','{jsonBody['name']}','{jsonBody['gender']}','{jsonBody['address']}','{jsonBody['city']}','{jsonBody['phone_number']}',now(),'{jsonBody['role']}')")
+            createUser = (f"insert into tbl_user(username,email,password,name,gender,address,city,phone_number,date_register,picture,role) values('{jsonBody['username']}','{jsonBody['email']}','{hashpassword.hexdigest()}','{jsonBody['name']}','{jsonBody['gender']}','{jsonBody['address']}','{jsonBody['city']}','{jsonBody['phone_number']}',now(),'a.jpg','{jsonBody['role']}')")
             db.execute(createUser)
             response={
                 "Data": jsonBody,
