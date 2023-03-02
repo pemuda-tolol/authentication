@@ -1,10 +1,11 @@
 from flask import Flask,request,jsonify,url_for
-import os,re,hashlib
+import os,re,hashlib,uuid
 from pony.flask import Pony
 from flask_jwt_extended import jwt_manager,JWTManager,create_access_token,jwt_required,get_jwt_identity
 from http import HTTPStatus
 from model import db
 from werkzeug.utils import secure_filename
+
 
  
 
@@ -12,6 +13,7 @@ app = Flask(__name__)
 app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
 regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
 email_regex = re.compile(r"[^@]+@[^@]+\.[^@]")
+myId = uuid.uuid4()
 
 
 app.config['UPLOAD_FOLDER'] = os.getenv("UPLOAD_FOLDER")
