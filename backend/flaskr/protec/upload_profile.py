@@ -1,5 +1,5 @@
 from configur import app,request,get_jwt_identity,jwt_required,jsonify,HTTPStatus,secure_filename,os,uploadfolder,allowedextensions,maxcontent,db,url_for
-
+app.config['JWT_CSRF_CHECK_FORM'] = True
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in allowedextensions
 
@@ -24,7 +24,7 @@ def upload():
             files = request.files.getlist('picture')
             success = False
             id = current_user[0][0]
-            for user in db.select(f"select id_user,picture from tbl_user where id_user = {id}"): 
+            for user in db.select(f"select id_user,picture from tbl_user where id_user = '{id}'"): 
                 user = {
                     "id_user": user[0],
                     "pic_user": user[1]
@@ -46,7 +46,7 @@ def upload():
                     }
                     return jsonify(response),HTTPStatus.BAD_REQUEST
             if success:
-                uploadFoto = (f"update tbl_user set picture='{picname}' where id_user = {id}")
+                uploadFoto = (f"update tbl_user set picture='{picname}' where id_user = '{id}'")
                 db.execute(uploadFoto)
                 resp = jsonify({'message' : 'Files successfully uploaded',
                                 "data": picname})
